@@ -1,0 +1,45 @@
+package VoxelSystem.CMS;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import VoxelSystem.CMS.Tables.Edge;
+import VoxelSystem.Data.VoxelCube;
+
+import com.jme3.math.Vector3f;
+
+public class CellCMS {
+	public static class Face{
+		int type;
+		List<Vector3f> segment;
+		public Face(){
+			segment=new ArrayList<Vector3f>();
+		}
+		
+	}
+	
+	
+	
+	public CellCMS(VoxelCube vc){
+//		int edges = VoxelSystemTables.getEdgeFromMaterials(vc);
+		
+		//For each face
+		for(int i=0;i<6;i++){
+			//Gen segments
+			int c = Tables.getType(vc, i);
+			Edge[] edges = Tables.getActiveEdges(vc, i);
+			if(c == 3){
+				//get normals....
+				
+				
+			}else if(c==2){
+				//Get two normals
+				
+			}else{
+				
+			}
+		}
+			
+		//
+	}
+}
